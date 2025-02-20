@@ -1,11 +1,14 @@
 body {
     font-family: sans-serif;
-    background-color: #f0f0f0;
+    background-image: url("bg1.png"); /* Replace with your image filename! */
+    background-size: cover; /* Make image cover the entire background */
+    background-repeat: no-repeat; /* Prevent image from tiling */
+    background-color: #f0f0f0; /* Fallback background color if image fails to load */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Make body take up the full viewport height */
-    margin: 0;     /* Remove default body margins */
+    height: 100vh;
+    margin: 0;
 }
 
 #gameCanvas {
