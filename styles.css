@@ -11,9 +11,45 @@ body {
     margin: 0;
 }
 
-#gameCanvas {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+#gameContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
+}
+
+#title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff0000; /* Red color */
+    margin-bottom: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.menu-button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #0000ff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: flyIn 1s ease-out; /* Apply flyIn animation */
+}.menu-button:hover {
+    background-color: #0000aa; /* Darker blue on hover */
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
