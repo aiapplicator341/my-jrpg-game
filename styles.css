@@ -68,3 +68,24 @@ body {
 #musicChoice button {
     margin: 0 5px; /* Add a little horizontal spacing between Yes/No buttons */
 }
+
+
+#volumeControl {
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 20px;    /* Distance from the bottom of the viewport */
+    left: 20px;     /* Distance from the left of the viewport */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#volumeControl label {
+    margin-right: 10px;
+    color: #333; /* Dark gray color for label text */
+}
+
+#volumeControl input[type="range"] {
+    width: 150px; /* Adjust width as needed */
+}
