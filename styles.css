@@ -41,6 +41,16 @@ body {
     animation: flyIn 1s ease-out; /* Apply flyIn animation */
 }.menu-button:hover {
     background-color: #0000aa; /* Darker blue on hover */
+}.menu-button-small{
+    margin-bottom: 8px;
+    padding: 8px 18px;
+    font-size: 1.0em;
+    background-color: #0000ff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: flyIn .5s ease-out; /* Apply flyIn animation */  
 }
 
 @keyframes flyIn {

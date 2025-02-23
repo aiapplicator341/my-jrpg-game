@@ -8,19 +8,17 @@
 <body>
     <div id="gameContainer">
         <div id="title">My JRPG</div>
-        <div id="musicChoice">
-            <p>Play background music?</p>
-            <button class="music-button" id="musicYes">Yes</button>
-            <button class="music-button" id="musicNo">No</button>
-        </div>
-        <audio id="backgroundMusic" src="menuTune1.ogg" loop></audio>
+
         <div id="menu">
             <button class="menu-button">New Game</button>
             <button class="menu-button">Load Game</button>
             <button class="menu-button">Settings</button>
+            <button class="menu-button-small">Credits</button>
         </div>
     </div>
     <div id="volumeControl">
+        <div id="audioTitle">Play Music?</div>
+        <audio id="backgroundMusic" src="menuTune1.ogg" loop></audio>
         <button id="playPauseButton">Play</button>
         <label for="volumeSlider">Volume:</label>
         <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
