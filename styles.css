@@ -73,16 +73,32 @@ body {
 #volumeControl {
     position: fixed; /* Fixed position at the bottom */
     bottom: 20px;    /* Distance from the bottom of the viewport */
-    left: 20px;     /* Distance from the left of the viewport */
+    left: 50%;      /* Center horizontally using left: 50% and transform */
+    transform: translateX(-50%); /* Adjust horizontal centering */
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 10px 20px;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    gap: 15px; /* Add some space between elements inside volumeControl */
+}
+
+#volumeControl button {
+    padding: 8px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green color for button */
+    color: white;
+}
+
+#volumeControl button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
 #volumeControl label {
-    margin-right: 10px;
+    margin-right: 0; /* Remove default right margin from label */
     color: #333; /* Dark gray color for label text */
 }
 
