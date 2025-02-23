@@ -1,25 +1,12 @@
-console.log("JavaScript file is linked and running!");
-
-
 const newGameButton = document.querySelector('.menu-button:nth-child(1)');
 const gameContainer = document.getElementById('gameContainer');
 const musicYesButton = document.getElementById('musicYes');
 const musicNoButton = document.getElementById('musicNo');
 const backgroundMusic = document.getElementById('backgroundMusic');
-const volumeSlider = document.getElementById('volumeSlider'); // Select volume slider
+const volumeSlider = document.getElementById('volumeSlider');
+const playPauseButton = document.getElementById('playPauseButton'); // Select play/pause button
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const newGameButton = document.querySelector('.menu-button:nth-child(1)'); // Select the first button (New Game)
-    const gameContainer = document.getElementById('gameContainer');
-
-    newGameButton.addEventListener('click', function() {
-        // Change the content of the game container when the button is clicked
-        gameContainer.innerHTML = '<h2>Starting a New Game!</h2><p>Game content will load here...</p>';
-    });
-});
-
+let isMusicPlaying = false; // Variable to track music state (initially paused)
 
 newGameButton.addEventListener('click', function() {
     gameContainer.innerHTML = '<h2>Starting a New Game!</h2><p>Game content will load here...</p>';
@@ -27,12 +14,28 @@ newGameButton.addEventListener('click', function() {
 
 musicYesButton.addEventListener('click', function() {
     backgroundMusic.play();
+    isMusicPlaying = true; // Update music state to playing
+    playPauseButton.textContent = "Pause"; // Update button text to "Pause"
 });
 
 musicNoButton.addEventListener('click', function() {
     backgroundMusic.pause();
+    isMusicPlaying = false; // Update music state to paused
+    playPauseButton.textContent = "Play"; // Update button text to "Play"
+});
+
+playPauseButton.addEventListener('click', function() {
+    if (isMusicPlaying) {
+        backgroundMusic.pause();
+        isMusicPlaying = false;
+        playPauseButton.textContent = "Play"; // Change button text to "Play" when paused
+    } else {
+        backgroundMusic.play();
+        isMusicPlaying = true;
+        playPauseButton.textContent = "Pause"; // Change button text to "Pause" when playing
+    }
 });
 
 volumeSlider.addEventListener('input', function() {
-    backgroundMusic.volume = volumeSlider.value; // Set audio volume to slider value
+    backgroundMusic.volume = volumeSlider.value;
 });
