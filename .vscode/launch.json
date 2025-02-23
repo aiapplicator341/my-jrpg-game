@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "url": "C:\Users\bhenr\Documents\Github-stuff\my-jrpg-game\index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
