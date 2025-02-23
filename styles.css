@@ -41,6 +41,8 @@ body {
     animation: flyIn 1s ease-out; /* Apply flyIn animation */
 }.menu-button:hover {
     background-color: #0000aa; /* Darker blue on hover */
+}.menu-button-small:hover {
+    background-color: #0000aa; /* Darker blue on hover */
 }.menu-button-small{
     margin-bottom: 8px;
     padding: 8px 18px;
@@ -71,26 +73,19 @@ body {
     margin-top: 10px; /* Add some space above the music choice buttons */
 }
 
-#musicChoice p {
-    margin-right: 15px; /* Add space between the question and buttons */
-}
-
-#musicChoice button {
-    margin: 0 5px; /* Add a little horizontal spacing between Yes/No buttons */
-}
-
 
 #volumeControl {
     position: fixed; /* Fixed position at the bottom */
     bottom: 20px;    /* Distance from the bottom of the viewport */
     left: 50%;      /* Center horizontally using left: 50% and transform */
     transform: translateX(-50%); /* Adjust horizontal centering */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    padding: 10px 10px;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 15px; /* Add some space between elements inside volumeControl */
+    flex-direction: column; /* Stack items vertically */
+    gap: 6px; /* Add some space between elements inside volumeControl */
 }
 
 #volumeControl button {
@@ -114,4 +109,8 @@ body {
 
 #volumeControl input[type="range"] {
     width: 150px; /* Adjust width as needed */
+}
+
+#audioBanner {
+    text-align: center; /* Center the text */
 }

@@ -17,6 +17,7 @@ playPauseButton.addEventListener('click', function() {
         isMusicPlaying = false;
         playPauseButton.textContent = "Play"; // Change button text to "Play" when paused
     } else {
+        backgroundMusic.volume = volumeSlider.value;
         backgroundMusic.play();
         isMusicPlaying = true;
         playPauseButton.textContent = "Pause"; // Change button text to "Pause" when playing
