@@ -53,3 +53,18 @@ body {
         opacity: 1;
     }
 }
+
+#musicChoice {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: center; /* Horizontally center items */
+    margin-top: 10px; /* Add some space above the music choice buttons */
+}
+
+#musicChoice p {
+    margin-right: 15px; /* Add space between the question and buttons */
+}
+
+#musicChoice button {
+    margin: 0 5px; /* Add a little horizontal spacing between Yes/No buttons */
+}
